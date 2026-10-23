@@ -3,79 +3,95 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dynamic Systems — SY Systems LLC</title>
-  <meta name="description" content="Dynamic Systems, a product of SY Systems LLC: dispatch and communication software for community volunteer and emergency-response organizations.">
+  <title>Dynamic Systems — Security, Access Control &amp; Network | SY Systems LLC</title>
+  <meta name="description" content="Dynamic Systems (SY Systems LLC): security cameras, access control, networking, and dispatch &amp; communication platforms for organizations in Brooklyn, New York.">
+  <link rel="icon" href="logo.png">
   <style>
-    :root { --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --brand:#1d4ed8; --bg:#ffffff; --soft:#f8fafc; }
-    @media (prefers-color-scheme: dark) {
-      :root { --ink:#e2e8f0; --muted:#94a3b8; --line:#1e293b; --brand:#60a5fa; --bg:#0b1220; --soft:#0f172a; }
-    }
+    :root { --ink:#111111; --muted:#4b5563; --line:#e5e7eb; --gold:#ffc107; --gold-ink:#7a5a00; --bg:#ffffff; --soft:#fafafa; }
     * { box-sizing: border-box; }
     body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; }
-    .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
-    header { border-bottom:1px solid var(--line); }
-    header .wrap { display:flex; align-items:center; justify-content:space-between; height:64px; }
-    .logo { font-weight:800; font-size:20px; letter-spacing:-.02em; }
-    .logo span { color:var(--brand); }
-    nav a { color:var(--muted); text-decoration:none; margin-left:20px; font-size:15px; }
-    .hero { padding: 72px 0 48px; }
-    .hero h1 { font-size: clamp(30px, 5vw, 46px); line-height:1.15; margin:0 0 16px; letter-spacing:-.02em; }
-    .hero p { font-size:18px; color:var(--muted); max-width: 680px; margin:0; }
-    section { padding: 40px 0; border-top:1px solid var(--line); }
-    h2 { font-size:24px; margin:0 0 20px; }
-    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:16px; }
-    .card { background:var(--soft); border:1px solid var(--line); border-radius:12px; padding:20px; }
-    .card h3 { margin:0 0 6px; font-size:17px; }
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+    header { background:#111; color:#fff; }
+    header .wrap { display:flex; align-items:center; justify-content:space-between; height:68px; gap:12px; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.02em; font-size:18px; text-transform:uppercase; }
+    .brand img { width:44px; height:44px; border-radius:8px; background:#fff; }
+    .brand span { color:var(--gold); }
+    nav a { color:#d1d5db; text-decoration:none; margin-left:18px; font-size:15px; }
+    nav a:hover { color:var(--gold); }
+    .hero { display:grid; grid-template-columns: 1.3fr 1fr; gap:32px; align-items:center; padding: 56px 0 40px; }
+    .hero h1 { font-size: clamp(30px, 4.6vw, 46px); line-height:1.12; margin:0 0 16px; letter-spacing:-.02em; }
+    .hero h1 em { font-style:normal; background: linear-gradient(transparent 62%, var(--gold) 62%); }
+    .hero p { font-size:18px; color:var(--muted); margin:0 0 20px; }
+    .hero img { width:100%; max-width:340px; justify-self:center; }
+    .tags { display:flex; flex-wrap:wrap; gap:8px; }
+    .tag { font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; background:#111; color:#fff; padding:6px 10px; border-radius:6px; }
+    .tag::before { content:"●"; color:var(--gold); margin-right:6px; }
+    section { padding: 44px 0; border-top:1px solid var(--line); }
+    h2 { font-size:26px; margin:0 0 22px; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:16px; }
+    .card { background:var(--soft); border:1px solid var(--line); border-top:4px solid var(--gold); border-radius:10px; padding:20px; }
+    .card h3 { margin:0 0 8px; font-size:17px; }
     .card p { margin:0; color:var(--muted); font-size:15px; }
     p { color:var(--muted); }
-    a { color:var(--brand); }
-    footer { border-top:1px solid var(--line); padding:28px 0 40px; color:var(--muted); font-size:14px; }
+    a { color:#111; text-decoration-color: var(--gold); text-underline-offset:3px; }
+    footer { background:#111; color:#9ca3af; padding:26px 0 34px; font-size:14px; }
+    footer strong { color:#fff; }
+    @media (max-width: 720px) {
+      .hero { grid-template-columns: 1fr; padding-top:36px; }
+      .hero img { max-width:220px; order:-1; }
+      nav a { margin-left:12px; font-size:14px; }
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="wrap">
-      <div class="logo">Dynamic <span>Systems</span></div>
-      <nav><a href="#about">About</a><a href="#contact">Contact</a><a href="#privacy">Privacy</a></nav>
+      <div class="brand"><img src="logo.png" alt="Dynamic Systems logo">Dynamic <span>Systems</span></div>
+      <nav><a href="#services">Services</a><a href="#contact">Contact</a><a href="#privacy">Privacy</a></nav>
     </div>
   </header>
 
   <main class="wrap">
     <div class="hero">
-      <h1>Dispatch and communication software for community responders.</h1>
-      <p>Dynamic Systems is developed and operated by <strong>SY Systems LLC</strong>. We build and run
-        call-intake, dispatch and team-alerting platforms for community volunteer and emergency-response
-        organizations in Brooklyn, New York.</p>
+      <div>
+        <h1>Security, access control and <em>network systems</em> — built and supported in Brooklyn.</h1>
+        <p>Dynamic Systems is a business of <strong>SY Systems LLC</strong>. We design, install and support
+          security and communication systems for organizations — from cameras and door access to networks
+          and the dispatch platforms community responders rely on.</p>
+        <div class="tags"><span class="tag">Security</span><span class="tag">Access Control</span><span class="tag">Network</span></div>
+      </div>
+      <img src="logo.png" alt="Dynamic Systems — Security, Access Control, Network">
     </div>
 
-    <section id="about">
-      <h2>What we do</h2>
+    <section id="services">
+      <h2>Services</h2>
       <div class="grid">
-        <div class="card"><h3>Call intake &amp; dispatch</h3><p>A hotline and dispatch console that logs incoming calls, creates incidents and assigns responders.</p></div>
-        <div class="card"><h3>Responder alerts</h3><p>Real-time alerts to volunteer responders through the mobile app, push notifications and voice calls.</p></div>
-        <div class="card"><h3>Caller updates</h3><p>Status updates to the people who asked for help — for example, that a responder is on the way.</p></div>
+        <div class="card"><h3>Security cameras</h3><p>Camera systems and recording, designed, installed and maintained for your site.</p></div>
+        <div class="card"><h3>Access control</h3><p>Door access, credentials and entry management for buildings and organizations.</p></div>
+        <div class="card"><h3>Networking</h3><p>Reliable wired and wireless networks that keep your systems and people connected.</p></div>
+        <div class="card"><h3>Dispatch &amp; communication platforms</h3><p>Call intake, dispatch and responder-alert software we build and operate for community volunteer and emergency-response organizations — hotline calls, app alerts and caller status updates.</p></div>
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p><strong>SY Systems LLC</strong><br>
+      <p><strong>SY Systems LLC</strong> · Dynamic Systems<br>
         Brooklyn, New York, USA<br>
         Email: <a href="mailto:dynamic86systems@gmail.com">dynamic86systems@gmail.com</a></p>
     </section>
 
     <section id="privacy">
       <h2>Privacy</h2>
-      <p>The platforms we operate are used by member organizations to coordinate assistance requests.
-        Phone numbers and call details are used only to handle and follow up on those requests, are
-        never sold, and are shared only with the responding organization. Messages are sent only in
+      <p>The communication platforms we operate are used by member organizations to coordinate requests for
+        assistance. Phone numbers and call details are used only to handle and follow up on those requests,
+        are never sold, and are shared only with the responding organization. Messages are sent only in
         connection with a request for assistance; recipients can reply STOP to opt out of text messages.
         Questions about your data can be sent to the email address above.</p>
     </section>
   </main>
 
   <footer>
-    <div class="wrap">© <span id="y">2026</span> SY Systems LLC · Dynamic Systems</div>
+    <div class="wrap">© <span id="y">2026</span> <strong>SY Systems LLC</strong> · Dynamic Systems — Security · Access Control · Network</div>
   </footer>
   <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
